@@ -1,0 +1,9 @@
+name: mounts
+os: Debian, Raspbian, Ubuntu
+os_family: Debian
+version: 1.0.0
+release: 1
+minimum_version: 3006
+summary: 'mounts formula'
+description: 'Manages filesystem mounts and /etc/fstab entries from pillar, with an optional helper to format a block device with ext4 before mounting it if it isn''t already formatted.'
+top_level_dir: mounts

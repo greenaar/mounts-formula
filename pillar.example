@@ -1,0 +1,22 @@
+mounts:
+  mounted:
+    data-disk:
+      name: /mnt/data
+      device: /dev/disk/by-id/scsi-0DO_Volume_data
+      fstype: ext4
+      format: true    # run the safe-format script if not already formatted
+      mkmnt: true
+      opts: defaults,noatime
+      persist: true
+
+    nfs-share:
+      name: /mnt/shared
+      device: nfs-server:/export/shared
+      fstype: nfs
+      opts: defaults,_netdev
+      persist: true
+
+  unmounted:
+    old-mount:
+      name: /mnt/old
+      device: /dev/sdb1
